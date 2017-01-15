@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<% if(currentUser) { %>
+  Hello, <%= currentUser.name() %>
+  <ul>
+  <li><a href="/edit"> Edit </a></li>
+    <li><a href="/logout"> Log out </a></li>
+  </ul>
+<% } else { %>
+  <ul>
+  <li><a href="/login"> Log in </a></li>
+    <li><a href="/signup"> Sign up </a></li>
+  </ul>
+<% } %>
+<% errors.forEach(function(error){%>
+  <div><%=error%></div>
+<% });%>
+<% infos.forEach(function(info){%>
+  <div><%=info%></div>
+<%});%>

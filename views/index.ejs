@@ -1,0 +1,11 @@
+<% include _header %>
+<h2>Hello to LAM</h2>
+<%
+  users.forEach(function(user){
+    %>
+    <div><a href="/users/<%=user.username%>"><%= user.name()%></a></div>
+  <div><%= user.bio%></div>
+    <%
+  })
+%>
+<% include _footer %>
